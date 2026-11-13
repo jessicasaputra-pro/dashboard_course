@@ -70,6 +70,7 @@ STORE_COLS = TABEL_COLS + ["churn"]
 # ============================================================
 
 app = Dash(__name__, title="Dash Callback")
+server = app.server   # objek WSGI untuk deployment (PythonAnywhere, gunicorn, dll.)
 
 app.layout = html.Div(
     style={
